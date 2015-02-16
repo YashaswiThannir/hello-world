@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.{RequestMapping, RequestMethod, R
 
 @Controller 
 @EnableAutoConfiguration 
-class HelloController {
+class HelloConfig {
 
 @RequestMapping(value=Array("/"),method=Array(RequestMethod.GET)) 
 @ResponseBody 
