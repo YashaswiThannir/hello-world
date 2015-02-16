@@ -1,27 +1,16 @@
+
 package hello
 
-import org.springframework.context.annotation.{Configuration, ComponentScan}
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration
-import org.springframework.boot;
-import org.springframework.web.bind.annotation.RequestMapping; 
-import org.springframework.web.bind.annotation.ResponseBody; 
-import org.springframework.stereotype.Controller; 
+import org.springframework.boot.SpringApplication 
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration 
+import org.springframework.stereotype.Controller 
+import org.springframework.web.bind.annotation.{RequestMapping, RequestMethod, ResponseBody}
 
-/**
- * This config class will trigger Spring @annotation scanning and auto configure Spring context.
- *
- * @author sithuaung
- * @since 1.0
- */
- 
-@Controller
-@Configuration
-@EnableAutoConfiguration
-@ComponentScan
-class HelloConfig {
+@Controller 
+@EnableAutoConfiguration 
+class HelloController {
 
-@RequestMapping(Array("/")), method=Array(RequestMethod.GET))
-@ResponseBody
-def home(): String = "Hello World!"
-
-}
+@RequestMapping(value=Array("/"),method=Array(RequestMethod.GET)) 
+@ResponseBody 
+def home() : String = { "Hello World!" }
+ }
